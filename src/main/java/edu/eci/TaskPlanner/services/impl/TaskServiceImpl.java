@@ -27,7 +27,7 @@ public class TaskServiceImpl implements TaskService {
 		 List<Task> list = new ArrayList<>();
 	        for (int id : tasks.keySet()) {
 	            Task task = tasks.get(id);
-	            if (task.getUser().getId() == UserId){
+	            if (task.getUsuario().getId() == UserId){
 	               list.add(task);
 	            }
 	        }
@@ -39,7 +39,7 @@ public class TaskServiceImpl implements TaskService {
 		List<Task> list = new ArrayList<>();
         for (int id : tasks.keySet()) {
             Task task = tasks.get(id);
-            if (task.getUser().getUsername() == Username){
+            if (task.getUsuario().getUsername() == Username){
                list.add(task);
             }
         }

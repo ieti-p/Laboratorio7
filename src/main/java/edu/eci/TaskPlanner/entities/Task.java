@@ -33,7 +33,7 @@ public class Task {
 	}
 
 	public void setTitle(String titulo) {
-		this.title = titulo;
+		this.titulo = titulo;
 	}
 
 	public String getDescripcion() {
@@ -41,7 +41,7 @@ public class Task {
 	}
 
 	public void setDescription(String descripcion) {
-		this.description = descripcion;
+		this.descripcion = descripcion;
 	}
 
 	public String getDueDate() {

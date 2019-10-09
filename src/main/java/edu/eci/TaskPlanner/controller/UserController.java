@@ -17,18 +17,25 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.eci.TaskPlanner.entities.User;
 import edu.eci.TaskPlanner.services.UserService;
 
-@RestController
+
+//@RestController
 @RequestMapping(value = "/taskPlanner")
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    UserService userService;
 
     @GetMapping(value = "/v1/users")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
+    @GetMapping(value = "/v1/user/login")
+    public ResponseEntity< String> getUserlOg() {
+        //List<User> users = userService.getUsers();
+        return new ResponseEntity<>("", HttpStatus.OK);
+    }    
+    
 
     @GetMapping(value = "/v1/users/{userId}")
     public ResponseEntity<User> getUserById(@PathVariable String userId) {
